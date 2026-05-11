@@ -1,0 +1,53 @@
+.vm-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.vm-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.vm-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--accent-primary);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease;
+}
+
+.vm-card:hover::before {
+  transform: scaleY(1);
+}
+
+.vm-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.vm-text {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Margin utility */
+.mt-10 { margin-top: 2.5rem; }
+.mb-12 { margin-bottom: 3rem; }
+.text-center { text-align: center; }
