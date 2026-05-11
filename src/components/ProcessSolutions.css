@@ -1,0 +1,64 @@
+.process-section {
+  background-color: var(--bg-primary);
+}
+
+.process-header {
+  margin-bottom: 3.5rem;
+  max-width: 800px;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.process-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.process-card p {
+  color: var(--text-secondary);
+}
+
+.process-card.full-width {
+  grid-column: span 2;
+}
+
+.products-tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.product-tag {
+  background: var(--surface-warm);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.process-footer-note {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 800;
+  color: var(--text-tertiary);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 992px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .process-card.full-width {
+    grid-column: span 1;
+  }
+}

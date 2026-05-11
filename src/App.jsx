@@ -1,26 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import VisionMission from './components/VisionMission';
+import Journey from './components/Journey';
+import ProcessSolutions from './components/ProcessSolutions';
 import SurabhiSection from './components/SurabhiSection';
+import Installations from './components/Installations';
 import Footer from './components/Footer';
 
 function App() {
-  const [theme, setTheme] = useState('light');
-
-  useEffect(() => {
-    // Check for saved theme or system preference
+  const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.documentElement.setAttribute('data-theme', savedTheme);
-    } else if (prefersDark) {
-      setTheme('dark');
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
-  }, []);
+    return savedTheme || (prefersDark ? 'dark' : 'light');
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -35,7 +33,10 @@ function App() {
       <main>
         <Hero />
         <VisionMission />
+        <Journey />
+        <ProcessSolutions />
         <SurabhiSection />
+        <Installations />
       </main>
       <Footer />
     </div>

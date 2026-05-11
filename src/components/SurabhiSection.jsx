@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { 
-  Database, Activity, MonitorSmartphone, Layers, Truck, 
-  ThermometerSun, Camera, Network, BarChart3, ChevronRight 
+  Database, Activity, MonitorSmartphone, Truck, 
+  ThermometerSun, Camera, Network, BarChart3, ChevronRight, Shield
 } from 'lucide-react';
+import surabhiOverviewImg from '../assets/surabhi-overview.png';
+import labImg from '../assets/dairy_lab_automation.png';
+import weighbridgeImg from '../assets/weighbridge_automation.png';
+import hmiImg from '../assets/industrial_hmi_control.png';
+import plcImg from '../assets/industrial_plc_kepware.png';
+import securityImg from '../assets/dairy_security_rfid.png';
 import './SurabhiSection.css';
 
 const SurabhiSection = () => {
@@ -16,11 +22,40 @@ const SurabhiSection = () => {
   ];
 
   const integrations = [
-    { icon: <Database size={24} />, name: "Weighbridge", desc: "Captures live weight of raw milk, generates unique TankerId." },
-    { icon: <ThermometerSun size={24} />, name: "Lab Equipment", desc: "Collects live data like measurements and test results without manual entry." },
-    { icon: <MonitorSmartphone size={24} />, name: "HMIs", desc: "Displays real-time status of processes like milk flow, pasteurizer temp, CIP cycles." },
-    { icon: <Network size={24} />, name: "PLCs & Kepware", desc: "Ruggedized control with Kepware interface to Database Management System." },
-    { icon: <Camera size={24} />, name: "IP Cameras & RFID", desc: "Monitors entry/exit. RFID grants quick, secure access via boom barriers." }
+    { 
+      name: "Weighbridge & Milk Reception", 
+      desc: "Captures live weight of raw milk and generates unique TankerIDs. Seamlessly transfers raw milk from tankers to silos.", 
+      image: weighbridgeImg,
+      bullets: ["Live weight capture", "Unique TankerID generation", "Reception sequence tracking"]
+    },
+    { 
+      name: "Lab Equipment & Milko Scan", 
+      desc: "Direct integration with lab devices to collect measurements like Fat, SNF, and Outlet Temp without manual entry.", 
+      image: labImg,
+      bullets: ["Automated measurement collection", "Quality analysis (Fat/SNF)", "Error-free data logging"]
+    },
+    { 
+      name: "HMIs & Process Control", 
+      desc: "Real-time status of milk flow, pasteurizer temperatures, tank levels, and CIP cycles on industrial touch interfaces.", 
+      image: hmiImg,
+      bullets: ["Process flow visualization", "Temperature & level monitoring", "CIP cycle tracking"]
+    },
+    { 
+      name: "Security & RFID Access", 
+      desc: "IP Cameras and RFID scanners monitor entry/exit points and automatically grant access via boom barriers.", 
+      image: securityImg,
+      bullets: ["Authorized vehicle access", "Automated boom barriers", "Entry/Exit monitoring"]
+    },
+    { 
+      name: "Device Interface (PLC & Kepware)", 
+      desc: "Bidirectional communication between industrial PLCs and SQL Server databases for deep data logging and machine-level control.", 
+      image: plcImg,
+      bullets: [
+        "PLC: Ruggedized automation & control", 
+        "Automates specific processes or entire lines", 
+        "Kepware: Interface to SQL Server database"
+      ]
+    }
   ];
 
   const reports = [
@@ -31,13 +66,13 @@ const SurabhiSection = () => {
   return (
     <section id="surabhi" className="section bg-primary">
       <div className="container">
-        <div className="surabhi-header text-center mb-12">
-          <div className="badge">Our Flagship Product</div>
+        <div className="surabhi-header">
+          <div className="badge">Flagship product</div>
           <h2 className="section-title">
-            <span className="text-accent">SURABHI</span> Dairy MIS
+            <span className="text-accent">SURABHI</span> Dairy MIS for busy plants
           </h2>
           <p className="section-subtitle">
-            System for User Reports & Analytics and Bidirectional Hardware Interface
+            A central hub for reception, processing, utility tracking, hardware signals, analytics, and exports.
           </p>
         </div>
 
@@ -47,19 +82,19 @@ const SurabhiSection = () => {
               className={`tab-btn ${activeTab === 'overview' ? 'active' : ''}`}
               onClick={() => setActiveTab('overview')}
             >
-              Overview & Features
+              Overview
             </button>
             <button 
               className={`tab-btn ${activeTab === 'integrations' ? 'active' : ''}`}
               onClick={() => setActiveTab('integrations')}
             >
-              Hardware Integrations
+              Integrations
             </button>
             <button 
               className={`tab-btn ${activeTab === 'reports' ? 'active' : ''}`}
               onClick={() => setActiveTab('reports')}
             >
-              Analytics & Reports
+              Reports
             </button>
           </div>
 
@@ -70,8 +105,17 @@ const SurabhiSection = () => {
                 <div className="surabhi-intro card mb-12">
                   <h3>What is SURABHI?</h3>
                   <p>
-                    SURABHI is an integrated MIS system that acts as a central hub for Dairy Plants. It tracks and monitors plant operations, acquiring real-time data from PLCs and various devices to provide comprehensive oversight of the entire milk processing lifecycle—from reception to dispatch.
+                    SURABHI is an integrated MIS system for dairy plants. It pulls live data from PLCs and connected devices, then turns the full milk processing lifecycle from reception to dispatch into clear dashboards, reports, and alerts.
                   </p>
+                  <div className="intro-tags">
+                    <span>RFID ready</span>
+                    <span>PLC connected</span>
+                    <span>Excel and PDF exports</span>
+                  </div>
+                </div>
+                
+                <div className="surabhi-overview-img-container">
+                  <img src={surabhiOverviewImg} alt="SURABHI System Overview" className="surabhi-overview-img" />
                 </div>
                 
                 <h3 className="mb-6">Key Features</h3>
@@ -90,12 +134,26 @@ const SurabhiSection = () => {
             {/* Tab 2: Integrations */}
             {activeTab === 'integrations' && (
               <div className="tab-pane animate-fade-in">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="integrations-list">
                   {integrations.map((item, idx) => (
-                    <div key={idx} className="integration-card card">
-                      <div className="icon-wrapper">{item.icon}</div>
-                      <h4>{item.name}</h4>
-                      <p>{item.desc}</p>
+                    <div key={idx} className="integration-row card">
+                      <div className="integration-text">
+                        <div className="integration-header">
+                          {item.icon ? <div className="icon-wrapper">{item.icon}</div> : null}
+                          <h4>{item.name}</h4>
+                        </div>
+                        <p>{item.desc}</p>
+                        <ul className="integration-bullets">
+                          {item.bullets.map((bullet, i) => (
+                            <li key={i}><ChevronRight size={14} className="text-accent" /> {bullet}</li>
+                          ))}
+                        </ul>
+                      </div>
+                      {item.image && (
+                        <div className="integration-image">
+                          <img src={item.image} alt={item.name} />
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>

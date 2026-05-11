@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Sun, Moon, Menu, X, Droplet } from 'lucide-react';
 import './Navbar.css';
 
@@ -16,9 +16,8 @@ const Navbar = ({ theme, toggleTheme }) => {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about' },
-    { name: 'SURABHI MIS', href: '#surabhi' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Approach', href: '#about' },
+    { name: 'SURABHI', href: '#surabhi' },
   ];
 
   return (
@@ -28,7 +27,7 @@ const Navbar = ({ theme, toggleTheme }) => {
           <div className="logo-icon">
             <Droplet size={24} />
           </div>
-          <span className="logo-text">Panache<span className="text-accent">Eng</span></span>
+          <span className="logo-text">Panache<span className="text-accent"> Engineering</span></span>
         </a>
 
         {/* Desktop Navigation */}
@@ -49,7 +48,6 @@ const Navbar = ({ theme, toggleTheme }) => {
             >
               {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
             </button>
-            <a href="#contact" className="btn btn-primary">Get in Touch</a>
           </div>
         </nav>
 
@@ -83,11 +81,6 @@ const Navbar = ({ theme, toggleTheme }) => {
                 </a>
               </li>
             ))}
-            <li>
-              <a href="#contact" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
-                Get in Touch
-              </a>
-            </li>
           </ul>
         </div>
       )}

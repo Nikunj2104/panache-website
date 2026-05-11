@@ -1,5 +1,4 @@
-import React from 'react';
-import { ArrowRight, Activity, Cpu, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Activity, Cpu, ShieldCheck, Gauge, Thermometer, Droplets, RadioTower } from 'lucide-react';
 import './Hero.css';
 
 const Hero = () => {
@@ -7,56 +6,89 @@ const Hero = () => {
     <section id="home" className="hero hero-gradient">
       <div className="container hero-container">
         <div className="hero-content animate-fade-in">
-          <div className="badge">Innovating Dairy Automation</div>
+          <div className="badge">Built around real dairy floors</div>
           <h1 className="hero-title">
-            Intelligent Solutions for <br/>
-            <span className="text-accent">Dairy Digitalization</span>
+            Dairy automation that feels practical,
+            <span className="text-accent"> fast, and alive.</span>
           </h1>
           <p className="hero-subtitle">
-            Turnkey Projects in Dairy Digitalization & Hardware for Process Automation. We deliver cutting-edge automation solutions that enhance productivity and drive sustainable growth.
+            Panache Engineering connects weighbridges, PLCs, lab equipment, HMIs, cameras, and reporting into one hands-on command layer for dairy teams.
           </p>
           
           <div className="hero-actions">
             <a href="#surabhi" className="btn btn-primary btn-lg">
-              Discover SURABHI <ArrowRight size={20} />
+              Explore SURABHI <ArrowRight size={20} />
             </a>
             <a href="#about" className="btn btn-secondary btn-lg">
-              Our Expertise
+              See how we work
             </a>
           </div>
 
           <div className="hero-features">
             <div className="feature-item">
               <Activity className="text-accent" size={24} />
-              <span>Real-time Monitoring</span>
+              <span>Live plant signals</span>
             </div>
             <div className="feature-item">
               <Cpu className="text-accent" size={24} />
-              <span>Process Automation</span>
+              <span>Hardware-first automation</span>
             </div>
             <div className="feature-item">
               <ShieldCheck className="text-accent" size={24} />
-              <span>Reliable Hardware</span>
+              <span>Operator-friendly reporting</span>
             </div>
           </div>
         </div>
 
         <div className="hero-visual animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          <div className="glass-panel">
-            <div className="dashboard-mockup">
-              <div className="mockup-header">
-                <div className="dot red"></div>
-                <div className="dot yellow"></div>
-                <div className="dot green"></div>
+          <div className="plant-board">
+            <div className="plant-board-header">
+              <div>
+                <span className="eyebrow">Reception bay</span>
+                <strong>Monday batch run</strong>
               </div>
-              <div className="mockup-body">
-                <div className="chart-skeleton"></div>
-                <div className="stats-grid">
-                  <div className="stat-box"></div>
-                  <div className="stat-box"></div>
-                  <div className="stat-box"></div>
-                  <div className="stat-box"></div>
-                </div>
+              <span className="live-pill">Live</span>
+            </div>
+
+            <div className="plant-meter">
+              <div className="meter-copy">
+                <span>Raw milk received</span>
+                <strong>42,680 L</strong>
+              </div>
+              <div className="meter-ring">
+                <Gauge size={54} />
+              </div>
+            </div>
+
+            <div className="plant-flow">
+              <div className="flow-step active">
+                <Droplets size={22} />
+                <span>Weighbridge</span>
+              </div>
+              <div className="flow-line"></div>
+              <div className="flow-step active">
+                <Thermometer size={22} />
+                <span>Lab check</span>
+              </div>
+              <div className="flow-line"></div>
+              <div className="flow-step">
+                <RadioTower size={22} />
+                <span>PLC sync</span>
+              </div>
+            </div>
+
+            <div className="plant-stats">
+              <div>
+                <span>Tanker TAT</span>
+                <strong>18 min</strong>
+              </div>
+              <div>
+                <span>CIP cycle</span>
+                <strong>Stable</strong>
+              </div>
+              <div>
+                <span>Reports</span>
+                <strong>12 ready</strong>
               </div>
             </div>
           </div>

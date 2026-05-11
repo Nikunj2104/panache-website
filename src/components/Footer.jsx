@@ -1,4 +1,3 @@
-import React from 'react';
 import { MapPin, Phone, Mail, Droplet } from 'lucide-react';
 import './Footer.css';
 
@@ -12,27 +11,34 @@ const Footer = () => {
               <div className="logo-icon">
                 <Droplet size={24} />
               </div>
-              <span className="logo-text" style={{ color: 'white' }}>Panache<span className="text-accent">Eng</span></span>
+              <span className="logo-text" style={{ color: 'white' }}>Panache<span className="text-accent"> Engineering</span></span>
             </div>
             <p className="footer-desc">
-              Delivering cutting-edge automation solutions that enhance productivity, ensure safety, and drive sustainable growth.
+              Dairy automation, hardware integration, MIS reporting, and on-site engineering support from Vadodara.
             </p>
           </div>
 
           <div className="footer-contact">
-            <h4 className="footer-title">Contact Us</h4>
+            <h4 className="footer-title">Start a plant conversation</h4>
             <ul className="contact-list">
               <li>
                 <MapPin size={20} className="text-accent" />
-                <span>C-107, Gokuldham Housing Society, Manjalpur, GIDC Road, Vadodara 390 020, India.</span>
+                {/* <a 
+                  href="https://www.google.com/maps/search/?api=1&query=Panache+Engineering+Vadodara" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="footer-link"
+                > */}
+                  C-107, Gokuldham Housing Society, Manjalpur, GIDC Road, Vadodara 390 020, India.
+                {/* </a> */}
               </li>
               <li>
                 <Phone size={20} className="text-accent" />
-                <span>+91 9510909507</span>
+                <a href="tel:+919510909507" className="footer-link" target="_blank" rel="noopener noreferrer">+91 9510909507</a>
               </li>
               <li>
                 <Mail size={20} className="text-accent" />
-                <span>panacheeng21@gmail.com</span>
+                <a href="mailto:panacheeng21@gmail.com" className="footer-link" target="_blank" rel="noopener noreferrer">panacheeng21@gmail.com</a>
               </li>
             </ul>
           </div>

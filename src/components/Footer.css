@@ -1,5 +1,6 @@
 .footer {
-  background-color: #0f172a; /* Dark background always for footer */
+  background:
+    linear-gradient(135deg, var(--footer-bg), #113f40 72%, #5b2618);
   color: #f8fafc;
   padding: 4rem 0 2rem;
 }
@@ -22,7 +23,7 @@
 }
 
 .footer-desc {
-  color: #94a3b8;
+  color: #ddcdb7;
   line-height: 1.7;
 }
 
@@ -42,17 +43,24 @@
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  color: #cbd5e1;
+  color: #efe1cc;
 }
 
-.contact-list li span {
+.contact-list li span,
+.footer-link {
   flex: 1;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--accent-primary);
 }
 
 .footer-bottom {
   padding-top: 2rem;
-  border-top: 1px solid #334155;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
   text-align: center;
-  color: #64748b;
+  color: #b69f82;
   font-size: 0.875rem;
 }
