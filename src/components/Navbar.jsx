@@ -19,8 +19,8 @@ const Navbar = ({ theme, toggleTheme }) => {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Solutions', href: '#solutions' },
-    { name: 'SURABHI', href: '#surabhi' },
-    { name: 'Projects', href: '#projects' },
+    // { name: 'SURABHI', href: '#surabhi' },
+    // { name: 'Projects', href: '#projects' },
   ];
 
   return (
@@ -40,7 +40,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             ))}
           </ul>
           
-          <div className="nav-actions">
+          {/* <div className="nav-actions">
             <button 
               className="theme-toggle" 
               onClick={toggleTheme}
@@ -48,18 +48,18 @@ const Navbar = ({ theme, toggleTheme }) => {
             >
               {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
             </button>
-          </div>
+          </div> */}
         </nav>
 
         {/* Mobile Menu Button */}
         <div className="mobile-menu-btn">
-          <button 
+          {/* <button 
             className="theme-toggle" 
             onClick={toggleTheme}
             style={{ marginRight: '1rem' }}
           >
             {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-          </button>
+          </button> */}
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

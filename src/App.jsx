@@ -35,8 +35,8 @@ function App() {
         <VisionMission />
         <Journey />
         <ProcessSolutions />
-        <SurabhiSection />
-        <Installations />
+        {/* <SurabhiSection /> */}
+        {/* <Installations /> */}
       </main>
       <Footer />
     </div>
