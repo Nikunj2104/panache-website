@@ -8,7 +8,7 @@ const ProcessSolutions = () => {
   ];
 
   return (
-    <section className="section process-section">
+    <section id="solutions" className="section process-section">
       <div className="container">
         <div className="process-header">
           <div className="badge">Plant expertise</div>

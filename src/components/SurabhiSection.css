@@ -52,23 +52,11 @@
 }
 
 .tab-pane {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .tabs-content {
   padding: 0 0.25rem;
-}
-
-.surabhi-intro h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: var(--text-primary);
-}
-
-.surabhi-intro p {
-  color: var(--text-secondary);
-  font-size: 1.125rem;
-  line-height: 1.8;
 }
 
 .intro-tags {
@@ -202,39 +190,192 @@
   }
 }
 
-.report-items {
+/* Reports Accordion Styles */
+.reports-accordion {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.report-items li {
+.accordion-item {
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-item.active {
+  border-color: var(--accent-primary);
+  box-shadow: var(--card-shadow);
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.accordion-item.active .accordion-header {
+  background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+  color: white;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.report-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.live-tag {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1.125rem;
-  color: var(--text-primary);
-  padding-bottom: 0.5rem;
-  border-bottom: 1px dashed var(--border-color);
+  font-size: 0.7rem;
+  font-weight: 800;
+  opacity: 0.9;
+  letter-spacing: 1px;
 }
 
-.benefits-list {
+.live-tag .dot {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px white;
+  animation: pulse 2s infinite;
+}
+
+.accordion-collapse-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-item.active .accordion-collapse-wrapper {
+  grid-template-rows: 1fr;
+}
+
+.accordion-content {
+  overflow: hidden;
+  background: var(--bg-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease, padding 0.4s ease;
+  padding: 0 1.5rem;
+}
+
+.accordion-item.active .accordion-content {
+  opacity: 1;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.why-surabhi-premium {
+  position: relative;
+}
+
+.why-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  padding: 3rem;
+  align-items: center;
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface-warm) 100%);
+}
+
+.premium-title {
+  font-size: 2.25rem;
+  margin: 1rem 0;
+  line-height: 1.1;
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.premium-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding-bottom: 20px;
+}
+
+.why-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.why-feature-item {
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
   gap: 1rem;
-  list-style-type: disc;
-  padding-left: 1.5rem;
-  color: rgba(255, 255, 255, 0.9);
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: all 0.3s ease;
 }
 
-.benefits-list li {
-  font-size: 1.125rem;
+.why-feature-item:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.mini-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--accent-light);
+  color: var(--accent-primary);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.mini-text h5 {
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  font-weight: 800;
+}
+
+.mini-text p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .why-content-wrapper {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .why-features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.reports-info.card {
+  margin-top: 3rem;
 }
 
 .mb-6 { margin-bottom: 1.5rem; }
 
 .surabhi-overview-img-container {
-  margin: 2rem 0 4rem;
+  margin: 2rem 0 0;
   background: white;
   padding: 2rem;
   border-radius: 12px;

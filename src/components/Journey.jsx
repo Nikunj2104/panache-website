@@ -37,12 +37,12 @@ const Journey = () => {
   ];
 
   return (
-    <section className="section journey-section bg-secondary">
+    <section id="journey" className="section journey-section bg-secondary">
       <div className="container">
-        <div className="journey-header text-center">
+        <div className="journey-header">
           <div className="badge">Our Timeline</div>
           <h2 className="section-title">Our Journey</h2>
-          <p className="section-subtitle mx-auto">From hardware suppliers to a complete industrial automation force.</p>
+          <p className="section-subtitle">From hardware suppliers to a complete industrial automation force.</p>
         </div>
 
         <div className="timeline">

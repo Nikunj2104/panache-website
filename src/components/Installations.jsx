@@ -36,12 +36,12 @@ const Installations = () => {
   ];
 
   return (
-    <section className="section installations-section bg-primary">
+    <section id="projects" className="section installations-section bg-primary">
       <div className="container">
-        <div className="installations-header text-center">
+        <div className="installations-header">
           <div className="badge">Our Footprint</div>
           <h2 className="section-title">Dairy MIS Installations</h2>
-          <p className="section-subtitle mx-auto">Trusted by leading dairy brands across India for their digital transformation.</p>
+          <p className="section-subtitle">Trusted by leading dairy brands across India for their digital transformation.</p>
         </div>
 
         <div className="installations-grid">

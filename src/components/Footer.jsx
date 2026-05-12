@@ -1,4 +1,5 @@
-import { MapPin, Phone, Mail, Droplet } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
+import logo from '../assets/pe-logo.png';
 import './Footer.css';
 
 const Footer = () => {
@@ -8,10 +9,7 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-brand">
             <div className="logo mb-4">
-              <div className="logo-icon">
-                <Droplet size={24} />
-              </div>
-              <span className="logo-text" style={{ color: 'white' }}>Panache<span className="text-accent"> Engineering</span></span>
+              <img src={logo} alt="Panache Engineering" className="footer-logo-img" />
             </div>
             <p className="footer-desc">
               Dairy automation, hardware integration, MIS reporting, and on-site engineering support from Vadodara.

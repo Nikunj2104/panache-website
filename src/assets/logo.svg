@@ -1,0 +1,16 @@
+<svg width="400" height="350" viewBox="0 0 400 350" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Box -->
+  <rect x="20" y="20" width="360" height="185" fill="#222E3A" />
+  
+  <!-- Stylized 'P' -->
+  <path d="M65 55 H140 C170 55 190 75 190 105 C190 135 170 155 140 155 H100 V185 H65 V55 Z M100 85 V125 H135 C145 125 152 118 152 105 C152 92 145 85 135 85 H100 Z" fill="white" />
+  
+  <!-- Stylized 'E' -->
+  <path d="M205 55 H335 V88 H250 V110 H315 V138 H250 V160 H335 V193 H205 V55 Z" fill="white" />
+
+  <!-- Text: PANACHE -->
+  <text x="200" y="265" font-family="'Arial Black', Gadget, sans-serif" font-weight="900" font-size="64" text-anchor="middle" fill="#222E3A" letter-spacing="-3">PANACHE</text>
+  
+  <!-- Text: ENGINEERING -->
+  <text x="200" y="318" font-family="'Arial Black', Gadget, sans-serif" font-weight="900" font-size="20" text-anchor="middle" fill="#222E3A" letter-spacing="16">ENGINEERING</text>
+</svg>

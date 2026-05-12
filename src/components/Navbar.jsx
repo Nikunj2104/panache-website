@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Sun, Moon, Menu, X, Droplet } from 'lucide-react';
+import { Sun, Moon, Menu, X } from 'lucide-react';
+import logo from '../assets/pe-logo.png';
 import './Navbar.css';
 
 const Navbar = ({ theme, toggleTheme }) => {
@@ -16,18 +17,17 @@ const Navbar = ({ theme, toggleTheme }) => {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
-    { name: 'Approach', href: '#about' },
+    { name: 'About', href: '#about' },
+    { name: 'Solutions', href: '#solutions' },
     { name: 'SURABHI', href: '#surabhi' },
+    { name: 'Projects', href: '#projects' },
   ];
 
   return (
     <header className={`navbar glass ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
         <a href="#home" className="logo">
-          <div className="logo-icon">
-            <Droplet size={24} />
-          </div>
-          <span className="logo-text">Panache<span className="text-accent"> Engineering</span></span>
+          <img src={logo} alt="Panache Engineering" className="logo-img" />
         </a>
 
         {/* Desktop Navigation */}
