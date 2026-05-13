@@ -19,7 +19,7 @@ const Navbar = ({ theme, toggleTheme }) => {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Solutions', href: '#solutions' },
-    // { name: 'SURABHI', href: '#surabhi' },
+    { name: 'SURABHI', href: '#surabhi' },
     // { name: 'Projects', href: '#projects' },
   ];
 
