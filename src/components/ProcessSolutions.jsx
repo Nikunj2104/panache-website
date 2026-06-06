@@ -1,57 +1,116 @@
-import { Factory, Cog, Layers, Droplet } from 'lucide-react';
+import { Cpu, Gauge, Zap, Check } from 'lucide-react';
 import './ProcessSolutions.css';
 
 const ProcessSolutions = () => {
-  const products = [
-    "Milk Powder", "Ghee", "Ice Cream", "Curds", 
-    "Cheese", "Butter", "Paneer", "Whey"
+  const streams = [
+    {
+      id: "automation",
+      title: "Automation",
+      icon: Cpu,
+      description: "End-to-end control system design, programming, and software integration to make your plant operations seamless, intelligent, and visible in real time.",
+      offerings: [
+        "PLC & SCADA Systems",
+        "HMI Development & Configuration",
+        "Custom MIS Reporting (SURABHI)",
+        "Database & IoT Integration"
+      ],
+      industries: [
+        "Dairy & Food Processing",
+        "Beverages & Liquid Foods",
+        "Pharmaceuticals & Biotech",
+        "Water & Wastewater Treatment"
+      ]
+    },
+    {
+      id: "instrumentation",
+      title: "Instrumentation",
+      icon: Gauge,
+      description: "Precise process measurement and control hardware to ensure quality, safety, and repeatable production cycles across all stages.",
+      offerings: [
+        "Sensors (Flow, Temp, Level, Pressure)",
+        "SS 304 & SS 316 Instrument Fittings",
+        "Process Gauges & Control Valves",
+        "Calibration & Validation Support"
+      ],
+      industries: [
+        "Chemical & Process Plants",
+        "Dairy & Beverage Products",
+        "Oil & Gas / Petrochemicals",
+        "Power & Utility Sectors"
+      ]
+    },
+    {
+      id: "electrical",
+      title: "Electrical",
+      icon: Zap,
+      description: "Industrial power distribution, panel fabrication, and robust wiring layouts built for hazardous and demanding plant floors.",
+      offerings: [
+        "Control Panels (MCC/PCC)",
+        "Thermo Plastic & SS Enclosures",
+        "Power Distribution & Switchgear",
+        "Industrial Cabling & Cable Trays"
+      ],
+      industries: [
+        "Heavy Manufacturing & Engineering",
+        "FMCG & Packaging Lines",
+        "Agro-Processing Plants",
+        "Industrial Infrastructure"
+      ]
+    }
   ];
 
   return (
     <section id="solutions" className="section process-section">
       <div className="container">
         <div className="process-header">
-          <div className="badge">Plant expertise</div>
-          <h2 className="section-title">End-to-End Dairy Process Solutions</h2>
+          <div className="badge">Total Engineering Solutions</div>
+          <h2 className="section-title">Our Engineering Streams & Supported Industries</h2>
           <p className="section-subtitle">
-            Modern dairy plants are complex combinations of equipment working in synchronism to convert raw milk into diverse products.
+            We deliver integrated automation, instrumentation, and electrical engineering options tailored to your specific industrial operations.
           </p>
         </div>
 
         <div className="process-grid">
-          <div className="card process-card">
-            <div className="icon-wrapper">
-              <Factory size={32} />
-            </div>
-            <h3>Liquid Milk Processing (LMP)</h3>
-            <p>We design and automate systems that convert raw milk from cattle owners into processed milk, ready for consumption or further processing.</p>
-          </div>
+          {streams.map((stream) => {
+            const Icon = stream.icon;
+            return (
+              <div key={stream.id} className="card process-card">
+                <div className="icon-wrapper">
+                  <Icon size={32} />
+                </div>
+                <h3>{stream.title}</h3>
+                <p className="stream-desc">{stream.description}</p>
+                
+                <div className="stream-details">
+                  <div className="details-group">
+                    <h4>Key Offerings</h4>
+                    <ul className="offerings-list">
+                      {stream.offerings.map((offering, i) => (
+                        <li key={i}>
+                          <Check size={16} className="text-accent flex-shrink-0" />
+                          <span>{offering}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-          <div className="card process-card">
-            <div className="icon-wrapper">
-              <Cog size={32} />
-            </div>
-            <h3>PLC-Aided Operations</h3>
-            <p>Full plant operations carried out by one or more PLCs (Programmable Logic Controllers), precisely managing pumps, valves, and switches.</p>
-          </div>
-
-          <div className="card process-card full-width">
-            <div className="icon-wrapper">
-              <Layers size={32} />
-            </div>
-            <h3>Milk Product Plants</h3>
-            <p>Scalable automation for numerous products including:</p>
-            <div className="products-tag-cloud">
-              {products.map(p => (
-                <span key={p} className="product-tag">{p}</span>
-              ))}
-            </div>
-          </div>
+                  <div className="details-group">
+                    <h4>Supported Industries</h4>
+                    <div className="industry-tags">
+                      {stream.industries.map((ind, i) => (
+                        <span key={i} className="industry-tag">{ind}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
         <div className="process-footer-note">
-          <Droplet className="text-accent" />
-          <span>Synchronizing complex equipment for maximum efficiency.</span>
+          <Cpu className="text-accent animate-pulse" />
+          <span>Synchronizing complex hardware & software for modern operations.</span>
         </div>
       </div>
     </section>

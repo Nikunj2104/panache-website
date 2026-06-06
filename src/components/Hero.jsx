@@ -6,21 +6,21 @@ const Hero = () => {
     <section id="home" className="hero hero-gradient">
       <div className="container hero-container">
         <div className="hero-content animate-fade-in">
-          <div className="badge">Built around real dairy floors</div>
+          <div className="badge">Total Engineering Solutions</div>
           <h1 className="hero-title">
-            Dairy automation that feels practical,
+            Industrial automation that feels practical,
             <span className="text-accent"> fast, and alive.</span>
           </h1>
           <p className="hero-subtitle">
-            Panache Engineering connects weighbridges, PLCs, lab equipment, HMIs, cameras, and reporting into one hands-on command layer for dairy teams.
+            Panache Engineering connects PLCs, instrumentation, electrical systems, and reporting into one hands-on command layer for process and manufacturing teams.
           </p>
           
           <div className="hero-actions">
-            <a href="#surabhi" className="btn btn-primary btn-lg">
-              Explore SURABHI <ArrowRight size={20} />
+            <a href="#solutions" className="btn btn-primary btn-lg">
+              Our Core Streams <ArrowRight size={20} />
             </a>
-            <a href="#about" className="btn btn-secondary btn-lg">
-              See how we work
+            <a href="#surabhi" className="btn btn-secondary btn-lg">
+              Explore SURABHI MIS
             </a>
           </div>
 
@@ -44,15 +44,15 @@ const Hero = () => {
           <div className="plant-board">
             <div className="plant-board-header">
               <div>
-                <span className="eyebrow">Reception bay</span>
-                <strong>Monday batch run</strong>
+                <span className="eyebrow">Dairy Automation Example</span>
+                <strong>Active Batch Run</strong>
               </div>
               <span className="live-pill">Live</span>
             </div>
 
             <div className="plant-meter">
               <div className="meter-copy">
-                <span>Raw milk received</span>
+                <span>Batch volume processed</span>
                 <strong>42,680 L</strong>
               </div>
               <div className="meter-ring">
@@ -68,7 +68,7 @@ const Hero = () => {
               <div className="flow-line"></div>
               <div className="flow-step active">
                 <Thermometer size={22} />
-                <span>Lab check</span>
+                <span>Analysis</span>
               </div>
               <div className="flow-line"></div>
               <div className="flow-step">

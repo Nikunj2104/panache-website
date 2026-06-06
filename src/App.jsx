@@ -36,7 +36,7 @@ function App() {
         <Journey />
         <ProcessSolutions />
         <SurabhiSection />
-        {/* <Installations /> */}
+        <Installations />
       </main>
       <Footer />
     </div>

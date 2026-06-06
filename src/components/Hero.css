@@ -1,11 +1,12 @@
 .hero {
   padding-top: 9rem;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
   min-height: 92vh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .hero::before {
@@ -285,7 +286,7 @@
 @media (max-width: 720px) {
   .hero {
     min-height: auto;
-    padding-top: 7rem;
+    padding-top: 9rem;
   }
 
   .hero-title {

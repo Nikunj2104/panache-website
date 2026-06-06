@@ -1,5 +1,5 @@
 import { MapPin, Phone, Mail } from 'lucide-react';
-import logo from '../assets/pe-logo.png';
+import logo from '../assets/pe-logo-new.png';
 import './Footer.css';
 
 const Footer = () => {
@@ -12,7 +12,7 @@ const Footer = () => {
               <img src={logo} alt="Panache Engineering" className="footer-logo-img" />
             </div>
             <p className="footer-desc">
-              Dairy automation, hardware integration, MIS reporting, and on-site engineering support from Vadodara.
+              Total engineering solutions: automation, instrumentation, electrical systems and on-site engineering support from Vadodara.
             </p>
           </div>
 
@@ -27,7 +27,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="footer-link"
                 > */}
-                  C-107, Gokuldham Housing Society, Manjalpur, GIDC Road, Vadodara 390 020, India.
+                C-107, Gokuldham Housing Society, Manjalpur, GIDC Road, Vadodara 390 020, India.
                 {/* </a> */}
               </li>
               <li>

@@ -37,7 +37,7 @@ const Journey = () => {
   ];
 
   return (
-    <section id="journey" className="section journey-section bg-secondary">
+    <section id="journey" className="section bg-secondary">
       <div className="container">
         <div className="journey-header">
           <div className="badge">Our Timeline</div>

@@ -36,7 +36,7 @@ const VisionMission = () => {
         <div className="capabilities-section">
           <h3 className="capabilities-title">Engineering Capabilities</h3>
           <div className="capabilities-grid">
-            <div className="cap-item">Turnkey Projects in Dairy Digitalization</div>
+            <div className="cap-item">Turnkey Automation & Process Digitalization</div>
             <div className="cap-item">Hardware for Process Automation</div>
             <div className="cap-item">Control Panels</div>
             <div className="cap-item">Thermo Plastic and SS 304 Enclosure</div>
